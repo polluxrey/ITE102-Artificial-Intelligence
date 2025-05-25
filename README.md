@@ -62,7 +62,7 @@ This course includes three lab exercises focused on key machine learning techniq
 
 These lab exercises make use of [Orange](https://orangedatamining.com/), an open-source data visualization, machine learning and data mining toolkit.
 
-For the **final project**, you'll explore a range of AI models from [Hugging Face](https://huggingface.co/) applied to computer vision tasks. These include **Depth Estimation, Image Classification, Object Detection, Text-to-Image generation, and Text-to-Video generation**.
+For the **final project**, you'll explore a range of AI models, from [Hugging Face](https://huggingface.co/), applied to computer vision tasks. These include **Depth Estimation, Image Classification, Object Detection, Text-to-Image generation, and Text-to-Video generation**.
 
 ## Credit
 The course materials were prepared by me, with considerable time and effort dedicated to curating content from various reliable sources. Kindly ensure proper acknowledgment is given if these materials are used.

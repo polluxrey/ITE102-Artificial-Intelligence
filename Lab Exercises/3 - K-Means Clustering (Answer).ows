@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='utf-8'?>
+<scheme version="2.0" title="" description="">
+	<nodes>
+		<node id="0" name="Import Images" qualified_name="orangecontrib.imageanalytics.widgets.owimageimport.OWImportImages" project_name="Orange3-ImageAnalytics" version="" title="Import Images" position="(300, 300)" />
+		<node id="1" name="Python Script" qualified_name="Orange.widgets.data.owpythonscript.OWPythonScript" project_name="Orange3" version="" title="Python Script" position="(450, 450)" />
+		<node id="2" name="Data Table" qualified_name="Orange.widgets.data.owtable.OWTable" project_name="Orange3" version="" title="Data Table" position="(600, 450)" />
+		<node id="3" name="k-Means" qualified_name="Orange.widgets.unsupervised.owkmeans.OWKMeans" project_name="Orange3" version="" title="k-Means" position="(750, 600)" />
+		<node id="4" name="Data Table" qualified_name="Orange.widgets.data.owtable.OWTable" project_name="Orange3" version="" title="Centroids Data Table" position="(900, 450)" />
+		<node id="5" name="Image Viewer" qualified_name="orangecontrib.imageanalytics.widgets.owimageviewer.OWImageViewer" project_name="Orange3-ImageAnalytics" version="" title="Image Viewer" position="(450, 150)" />
+		<node id="6" name="Data Table" qualified_name="Orange.widgets.data.owtable.OWTable" project_name="Orange3" version="" title="K-Means Data Table" position="(900, 600)" />
+		<node id="7" name="Merge Data" qualified_name="Orange.widgets.data.owmergedata.OWMergeData" project_name="Orange3" version="" title="Merge Data" position="(1050, 600)" />
+		<node id="8" name="Data Table" qualified_name="Orange.widgets.data.owtable.OWTable" project_name="Orange3" version="" title="Merged Data Table" position="(1200, 600)" />
+		<node id="9" name="Select Columns" qualified_name="Orange.widgets.data.owselectcolumns.OWSelectAttributes" project_name="Orange3" version="" title="Select Columns" position="(1350, 600)" />
+		<node id="10" name="Edit Domain" qualified_name="Orange.widgets.data.oweditdomain.OWEditDomain" project_name="Orange3" version="" title="Edit Domain" position="(1500, 600)" />
+		<node id="11" name="Python Script" qualified_name="Orange.widgets.data.owpythonscript.OWPythonScript" project_name="Orange3" version="" title="Python Script (1)" position="(1500, 300)" />
+	</nodes>
+	<links>
+		<link id="0" source_node_id="0" sink_node_id="1" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="1" source_node_id="0" sink_node_id="5" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="2" source_node_id="1" sink_node_id="2" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="3" source_node_id="2" sink_node_id="3" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="annotated_data" sink_channel_id="data" />
+		<link id="4" source_node_id="3" sink_node_id="6" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="annotated_data" sink_channel_id="data" />
+		<link id="5" source_node_id="3" sink_node_id="4" source_channel="Centroids" sink_channel="Data" enabled="true" source_channel_id="centroids" sink_channel_id="data" />
+		<link id="6" source_node_id="7" sink_node_id="8" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="7" source_node_id="4" sink_node_id="7" source_channel="Data" sink_channel="Extra Data" enabled="true" source_channel_id="annotated_data" sink_channel_id="extra_data" />
+		<link id="8" source_node_id="6" sink_node_id="7" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="annotated_data" sink_channel_id="data" />
+		<link id="9" source_node_id="8" sink_node_id="9" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="annotated_data" sink_channel_id="data" />
+		<link id="10" source_node_id="9" sink_node_id="10" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="11" source_node_id="10" sink_node_id="11" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="12" source_node_id="0" sink_node_id="11" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+	</links>
+	<annotations />
+	<thumbnail />
+	<node_properties>
+		<properties node_id="0" format="pickle">gASVxQIAAAAAAAB9lCiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjAxyZWNlbnRfcGF0aHOUXZQojB5v
+cmFuZ2V3aWRnZXQudXRpbHMuZmlsZWRpYWxvZ3OUjApSZWNlbnRQYXRolJOUKYGUfZQojAdhYnNw
+YXRolIwlQzovVXNlcnMvUE1SL0Rvd25sb2Fkcy9PcmlnaW5hbCBJbWFnZZSMBnByZWZpeJROjAdy
+ZWxwYXRolE6MBXRpdGxllIwAlIwFc2hlZXSUaA6MC2ZpbGVfZm9ybWF0lE51YmgGKYGUfZQoaAmM
+KEM6L1VzZXJzL1BNUi9Eb3dubG9hZHMvSW1hZ2UgQ29tcHJlc3Npb26UaAtOaAxOaA1oDmgPaA5o
+EE51YmgGKYGUfZQoaAmMIUM6L1VzZXJzL1BNUi9Eb3dubG9hZHMvQ2x1c3RlcmluZ5RoC05oDE5o
+DWgOaA9oDmgQTnViaAYpgZR9lChoCYw+QzovVXNlcnMvUE1SL0Rvd25sb2Fkcy9Db21wcmVzc2Vk
+L21uaXN0X3BuZy9tbmlzdF9wbmcvdHJhaW5pbmeUaAtOaAxOaA1oDmgPaA5oEE51YmgGKYGUfZQo
+aAmMQkM6L1VzZXJzL1BNUi9Eb3dubG9hZHMvQ29tcHJlc3NlZC9rYWdnbGVjYXRzYW5kZG9nc181
+MzQwL1BldEltYWdlc5RoC05oDE5oDWgOaA9oDmgQTnViaAYpgZR9lChoCYwgQzovVXNlcnMvUE1S
+L0Rvd25sb2Fkcy9Eb2cgdiBDYXSUaAtOaAxOaA1oDmgPaA5oEE51YmWME3NhdmVkV2lkZ2V0R2Vv
+bWV0cnmUQ0IB2dDLAAMAAAAABAoAAACxAAAFSAAAAVAAAAQLAAAA0AAABUcAAAFPAAAAAAAAAAAH
+gAAABAsAAADQAAAFRwAAAU+UjAtfX3ZlcnNpb25fX5RLAXUu
+</properties>
+		<properties node_id="1" format="literal">{'controlAreaVisible': True, 'currentScriptIndex': 0, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x03\xc0\x00\x00\x00\x00\x00\x00\x07\x7f\x00\x00\x02\x03\x00\x00\x03\xc1\x00\x00\x00\x1f\x00\x00\x07~\x00\x00\x02\x02\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80\x00\x00\x03\xc1\x00\x00\x00\x1f\x00\x00\x07~\x00\x00\x02\x02', 'scriptLibrary': [{'name': 'get_pixels_rgb.py', 'script': 'import numpy as np\nfrom Orange.data import Table, Domain, ContinuousVariable, DiscreteVariable\nfrom PIL import Image, ImageOps\nfrom pathlib import Path\n\nnew_data = in_data.copy()\n\nimg_file = new_data[0]\nimg_path = Path(in_data.domain["image"].attributes["origin"])\nimg_name = Path(img_file.metas[1])\n\nimg = Image.open(img_path / img_name)\nimg = img.convert("RGB")\n\nwidth, height = img.size\n\ndata = []\nfor y in range(height):\n    for x in range(width):\n        pixel = img.getpixel((x, y))\n        r, g, b = pixel\n        data.append([r, g, b])\n\ndata = np.array(data)\n\ndomain = Domain([ContinuousVariable("r"), ContinuousVariable("g"), ContinuousVariable("b")])\n\nout_data = Table.from_numpy(domain, data)', 'filename': 'C:/Users/PMR/Downloads/Original Image/get_pixels_rgb.py'}], 'scriptText': 'import numpy as np\nfrom Orange.data import Table, Domain, ContinuousVariable, DiscreteVariable\nfrom PIL import Image, ImageOps\nfrom pathlib import Path\n\nnew_data = in_data.copy()\n\nimg_file = new_data[0]\nimg_path = Path(in_data.domain["image"].attributes["origin"])\nimg_name = Path(img_file.metas[1])\n\nimg = Image.open(img_path / img_name)\nimg = img.convert("RGB")\n\nwidth, height = img.size\n\ndata = []\nfor y in range(height):\n    for x in range(width):\n        pixel = img.getpixel((x, y))\n        r, g, b = pixel\n        data.append([r, g, b])\n\ndata = np.array(data)\n\ndomain = Domain([ContinuousVariable("r"), ContinuousVariable("g"), ContinuousVariable("b")])\n\nout_data = Table.from_numpy(domain, data)', 'splitterState': b'\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\xb9\x00\x00\x00y\x01\xff\xff\xff\xff\x01\x00\x00\x00\x02\x00', 'vimModeEnabled': False, '__version__': 2}</properties>
+		<properties node_id="2" format="literal">{'auto_commit': True, 'color_by_class': True, 'controlAreaVisible': True, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x03\xc0\x00\x00\x00\x00\x00\x00\x07\x7f\x00\x00\x04\x07\x00\x00\x03\xc1\x00\x00\x00\x1f\x00\x00\x07~\x00\x00\x04\x06\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80\x00\x00\x03\xc1\x00\x00\x00\x1f\x00\x00\x07~\x00\x00\x04\x06', 'select_rows': True, 'show_attribute_labels': True, 'show_distributions': False, 'stored_selection': {'rows': [], 'columns': []}, 'stored_sort': [], '__version__': 1}</properties>
+		<properties node_id="3" format="literal">{'auto_commit': True, 'controlAreaVisible': True, 'k': 30, 'k_from': 2, 'k_to': 10, 'max_iterations': 300, 'n_init': 10, 'normalize': False, 'optimize_k': False, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x00\xed\x00\x00\x01a\x00\x00\x02\xb5\x00\x00\x02\x99\x00\x00\x00\xee\x00\x00\x01\x80\x00\x00\x02\xb4\x00\x00\x02\x98\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80\x00\x00\x00\xee\x00\x00\x01\x80\x00\x00\x02\xb4\x00\x00\x02\x98', 'selection': 1, 'smart_init': 1, '__version__': 2}</properties>
+		<properties node_id="4" format="literal">{'auto_commit': True, 'color_by_class': True, 'controlAreaVisible': True, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x03\xbf\x00\x00\x04\x07\x00\x00\x00\x01\x00\x00\x00\x1f\x00\x00\x03\xbe\x00\x00\x04\x06\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80\x00\x00\x00\x01\x00\x00\x00\x1f\x00\x00\x03\xbe\x00\x00\x04\x06', 'select_rows': True, 'show_attribute_labels': True, 'show_distributions': False, 'stored_selection': {'rows': [], 'columns': []}, 'stored_sort': [], '__version__': 1}</properties>
+		<properties node_id="5" format="pickle">gASVmQEAAAAAAAB9lCiMCmF1dG9Db21taXSUiIwSY29udHJvbEFyZWFWaXNpYmxllIiMCWltYWdl
+U2l6ZZRNpAGME3NhdmVkV2lkZ2V0R2VvbWV0cnmUQ0IB2dDLAAMAAAAAAAAAAAAAAAADvwAAAgMA
+AAABAAAAHwAAA74AAAICAAAAAAAAAAAHgAAAAAEAAAAfAAADvgAAAgKUjAtfX3ZlcnNpb25fX5RL
+AYwQY29udGV4dF9zZXR0aW5nc5RdlIwVb3Jhbmdld2lkZ2V0LnNldHRpbmdzlIwHQ29udGV4dJST
+lCmBlH2UKIwGdmFsdWVzlH2UKIwKaW1hZ2VfYXR0cpSMBWltYWdllEtnhpSMDnNlbGVjdGVkX2l0
+ZW1zlI+USv7///+GlIwKdGl0bGVfYXR0cpSMCmltYWdlIG5hbWWUS2eGlGgGSwF1jAphdHRyaWJ1
+dGVzlH2UjAVtZXRhc5R9lCiMCmltYWdlIG5hbWWUSwOMBWltYWdllEsDjARzaXpllEsCjAV3aWR0
+aJRLAowGaGVpZ2h0lEsCdXViYXUu
+</properties>
+		<properties node_id="6" format="literal">{'auto_commit': True, 'color_by_class': True, 'controlAreaVisible': True, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x03\xc0\x00\x00\x00\x00\x00\x00\x07\x7f\x00\x00\x04\x07\x00\x00\x03\xc1\x00\x00\x00\x1f\x00\x00\x07~\x00\x00\x04\x06\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80\x00\x00\x03\xc1\x00\x00\x00\x1f\x00\x00\x07~\x00\x00\x04\x06', 'select_rows': True, 'show_attribute_labels': True, 'show_distributions': False, 'stored_selection': {'rows': [], 'columns': []}, 'stored_sort': [], '__version__': 1}</properties>
+		<properties node_id="7" format="pickle">gASVdQUAAAAAAAB9lCiMCmF1dG9fYXBwbHmUiIwSY29udHJvbEFyZWFWaXNpYmxllIiMB21lcmdp
+bmeUSwCME3NhdmVkV2lkZ2V0R2VvbWV0cnmUQ0IB2dDLAAMAAAAAAxsAAAFyAAAEbwAAAncAAAMc
+AAABkQAABG4AAAJ2AAAAAAAAAAAHgAAAAxwAAAGRAAAEbgAAAnaUjAtfX3ZlcnNpb25fX5RLAowQ
+Y29udGV4dF9zZXR0aW5nc5RdlCiMFW9yYW5nZXdpZGdldC5zZXR0aW5nc5SMB0NvbnRleHSUk5Qp
+gZR9lCiMBnZhbHVlc5R9lCiMCmF0dHJfcGFpcnOUXZRdlCiMB0NsdXN0ZXKUS2WGlGgTS2WGlGVh
+aAZLAnWMCnZhcmlhYmxlczGUfZQojAFylEtmjAFnlEtmjAFilEtmjAhTZWxlY3RlZJRLZYwHQ2x1
+c3RlcpRLZYwKU2lsaG91ZXR0ZZRLZowMU2VsZWN0ZWQgKDEplEtldYwKdmFyaWFibGVzMpR9lCho
+GEtmaBlLZmgaS2ZoG0tlaBxLZWgdS2Z1dWJoCymBlH2UKGgOfZQoaBBdlF2UKGgcS2WGlGgcS2WG
+lGVhaAZLAnVoFn2UKGgYS2ZoGUtmaBpLZmgbS2VoHEtlaB1LZnVoH32UKGgYS2ZoGUtmaBpLZmgb
+S2VoHEtlaB1LZnV1YmgLKYGUfZQoaA59lChoEF2UXZQoaBxLZYaUaBxLZYaUZWFoBksCdWgWfZQo
+aBhLZmgZS2ZoGktmaBtLZWgcS2VoHUtmdWgffZQoaBhLZmgZS2ZoGktmaBtLZWgcS2VoHUtmaB5L
+ZXV1YmgLKYGUfZQoaA59lChoEF2UXZQoaBxLZYaUaBxLZYaUZWFoBksCdWgWfZQoaBhLZmgZS2Zo
+GktmaBxLZWgdS2Z1aB99lChoGEtmaBlLZmgaS2ZoG0tlaBxLZWgdS2ZoHktldXViaAspgZR9lCho
+Dn2UKGgQXZRdlChoHEtlhpRoHEtlhpRlYWgGSwJ1aBZ9lChoGEtmaBlLZmgaS2ZoG0tlaBxLZWgd
+S2ZoHktldWgffZQoaBhLZmgZS2ZoGktmaBtLZWgcS2VoHUtmaB5LZXV1YmgLKYGUfZQoaA59lCho
+EF2UXZQoaBxLZYaUaBxLZYaUZWFoBksCdWgWfZQoaBhLZmgZS2ZoGktmaBtLZWgcS2VoHUtmaB5L
+ZXVoH32UKGgYS2ZoGUtmaBpLZmgcS2VoHUtmdXViaAspgZR9lChoDn2UKGgQXZRdlChoHEtlhpRo
+HEtlhpRlYWgGSwJ1aBZ9lChoGEtmaBlLZmgaS2ZoHEtlaB1LZnVoH32UKGgYS2ZoGUtmaBpLZmgb
+S2VoHEtlaB1LZnV1YmgLKYGUfZQoaA59lChoEF2UXZQojAdDbHVzdGVylEtlhpRoXEtlhpRlYWgG
+SwJ1aBZ9lChoGEtmaBlLZmgaS2ZoXEtljApTaWxob3VldHRllEtmdWgffZQoaBhLZmgZS2ZoGktm
+aFxLZWhgS2Z1dWJoCymBlH2UKGgOfZQoaBBdlF2UKIwHQ2x1c3RlcpRLZYaUaGdLZYaUZWFoBksC
+dWgWfZQoaBhLZmgZS2ZoGktmjAF4lEtmjAF5lEtmaGdLZYwKU2lsaG91ZXR0ZZRLZnVoH32UKGgY
+S2ZoGUtmaBpLZmhrS2ZobEtmaGdLZWhtS2Z1dWJoCymBlH2UKGgOfZQoaBBdlF2UKGhnS2WGlGhn
+S2WGlGVhaAZLAnVoFn2UKGgYS2ZoGUtmaBpLZmhrS2ZobEtmjAhTZWxlY3RlZJRLZWhnS2VobUtm
+dWgffZQoaBhLZmgZS2ZoGktmaGtLZmhsS2ZoZ0tlaG1LZnV1YmV1Lg==
+</properties>
+		<properties node_id="8" format="literal">{'auto_commit': True, 'color_by_class': True, 'controlAreaVisible': True, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x03\xbf\x00\x00\x02\x03\x00\x00\x00\x01\x00\x00\x00\x1f\x00\x00\x03\xbe\x00\x00\x02\x02\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80\x00\x00\x00\x01\x00\x00\x00\x1f\x00\x00\x03\xbe\x00\x00\x02\x02', 'select_rows': True, 'show_attribute_labels': True, 'show_distributions': False, 'stored_selection': {'rows': [], 'columns': []}, 'stored_sort': [], '__version__': 1}</properties>
+		<properties node_id="9" format="pickle">gASVLAkAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNpZ25v
+cmVfbmV3X2ZlYXR1cmVzlImME3NhdmVkV2lkZ2V0R2VvbWV0cnmUQ0IB2dDLAAMAAAAAAAAAAAAA
+AAADvwAAAgMAAAABAAAAHwAAA74AAAICAAAAAAAAAAAHgAAAAAEAAAAfAAADvgAAAgKUjBJ1c2Vf
+aW5wdXRfZmVhdHVyZXOUiYwLX192ZXJzaW9uX1+USwGMEGNvbnRleHRfc2V0dGluZ3OUXZQojBVv
+cmFuZ2V3aWRnZXQuc2V0dGluZ3OUjAdDb250ZXh0lJOUKYGUfZQojAZ2YWx1ZXOUfZQojBFkb21h
+aW5fcm9sZV9oaW50c5R9lCiMCFNlbGVjdGVklEsBhpSMCWF2YWlsYWJsZZRLAIaUjAdDbHVzdGVy
+lEsBhpRoFUsBhpSMClNpbGhvdWV0dGWUSwKGlGgVSwKGlIwMU2VsZWN0ZWQgKDEplEsBhpRoFUsD
+hpSMDFNlbGVjdGVkICgyKZRLAYaUaBVLBIaUjAVyICgxKZRLAoaUaBVLBYaUjAVnICgxKZRLAoaU
+aBVLBoaUjAViICgxKZRLAoaUaBVLB4aUjAVyICgyKZRLAoaUjAlhdHRyaWJ1dGWUSwCGlIwFZyAo
+MimUSwKGlGguSwGGlIwFYiAoMimUSwKGlGguSwKGlHVK/v///4aUaAdLAXWMCmF0dHJpYnV0ZXOU
+fZQojAVyICgxKZRLAowFZyAoMSmUSwKMBWIgKDEplEsCjAVyICgyKZRLAowFZyAoMimUSwKMBWIg
+KDIplEsCjAhTZWxlY3RlZJRLAXWMBW1ldGFzlH2UKIwHQ2x1c3RlcpRLAYwKU2lsaG91ZXR0ZZRL
+AowMU2VsZWN0ZWQgKDEplEsBjAxTZWxlY3RlZCAoMimUSwF1dWJoDCmBlH2UKGgPfZQoaBF9lCho
+F0sBhpRoFUsAhpRoGksChpRoFUsBhpSMDFNlbGVjdGVkICgxKZRLAYaUaBVLAoaUjAxTZWxlY3Rl
+ZCAoMimUSwGGlGgVSwOGlIwFciAoMSmUSwKGlGgVSwSGlIwFZyAoMSmUSwKGlGgVSwWGlIwFYiAo
+MSmUSwKGlGgVSwaGlIwMU2VsZWN0ZWQgKDMplEsBhpRoFUsHhpSMDFNlbGVjdGVkICg0KZRLAYaU
+aBVLCIaUjAVyICgyKZRLAoaUaC5LAIaUjAVnICgyKZRLAoaUaC5LAYaUjAViICgyKZRLAoaUaC5L
+AoaUdUr+////hpRoB0sBdWg3fZQojAVyICgxKZRLAowFZyAoMSmUSwKMBWIgKDEplEsCjAVyICgy
+KZRLAowFZyAoMimUSwKMBWIgKDIplEsCjAxTZWxlY3RlZCAoMimUSwGMDFNlbGVjdGVkICgzKZRL
+AXVoQH2UKIwHQ2x1c3RlcpRLAYwKU2lsaG91ZXR0ZZRLAowMU2VsZWN0ZWQgKDEplEsBjAxTZWxl
+Y3RlZCAoNCmUSwF1dWJoDCmBlH2UKGgPfZQojBFkb21haW5fcm9sZV9oaW50c5R9lChoQ0sChpSM
+CWF2YWlsYWJsZZRLAIaUaEJLAYaUaIFLAYaUaDlLAoaUaIFLAoaUaDpLAoaUaIFLA4aUaDtLAoaU
+aIFLBIaUaD9LAYaUaIFLBYaUaDxLAoaUjAlhdHRyaWJ1dGWUSwCGlGg9SwKGlGiOSwGGlGg+SwKG
+lGiOSwKGlGhESwGGlIwEbWV0YZRLAIaUdUr+////hpRoB0sBdWg3fZQojAVyICgxKZRLAowFZyAo
+MSmUSwKMBWIgKDEplEsCjAVyICgyKZRLAowFZyAoMimUSwKMBWIgKDIplEsCaD9LAXVoQH2UKGhC
+SwFoQ0sCjAxTZWxlY3RlZCAoMSmUSwF1dWJoDCmBlH2UKGgPfZQoaH59lChoQ0sChpRogUsAhpRo
+QksBhpRogUsBhpSMBXIgKDEplEsChpRogUsChpSMBWcgKDEplEsChpRogUsDhpSMBWIgKDEplEsC
+hpRogUsEhpRoP0sBhpRogUsFhpSMBXIgKDIplEsChpRojksAhpSMBWcgKDIplEsChpRojksBhpSM
+BWIgKDIplEsChpRojksChpR1Sv7///+GlGgHSwF1aDd9lCiMBXIgKDEplEsCjAVnICgxKZRLAowF
+YiAoMSmUSwKMBXIgKDIplEsCjAVnICgyKZRLAowFYiAoMimUSwKMCFNlbGVjdGVklEsBdWhAfZQo
+jAdDbHVzdGVylEsBjApTaWxob3VldHRllEsCdXViaAwpgZR9lChoD32UKIwRZG9tYWluX3JvbGVf
+aGludHOUfZQojApTaWxob3VldHRllEsChpSMCWF2YWlsYWJsZZRLAIaUjAdDbHVzdGVylEsBhpRo
+0EsBhpSMBXkgKDEplEsChpRo0EsChpSMBXIgKDEplEsChpRo0EsDhpSMBWcgKDEplEsChpRo0EsE
+hpSMBWIgKDEplEsChpRo0EsFhpSMBXggKDEplEsChpRo0EsGhpSMBXggKDIplEsChpRo0EsHhpSM
+BXkgKDIplEsChpRo0EsIhpSMCFNlbGVjdGVklEsBhpRo0EsJhpSMBXIgKDIplEsChpSMCWF0dHJp
+YnV0ZZRLAIaUjAVnICgyKZRLAoaUaO9LAYaUjAViICgyKZRLAoaUaO9LAoaUdUr+////hpRoB0sB
+dWg3fZQoaNhLAmjbSwJo3ksCaOFLAmjVSwJo7UsCaPFLAmj0SwJo5EsCaOdLAmjqSwF1aEB9lCho
+0ksBaM5LAnV1YmgMKYGUfZQoaA99lChozH2UKGjOSwKGlGjQSwCGlGjSSwGGlGjQSwGGlGjVSwKG
+lGjQSwKGlGjYSwKGlGjQSwOGlGjbSwKGlGjQSwSGlGjeSwKGlGjQSwWGlGjhSwKGlGjQSwaGlGjk
+SwKGlGjQSweGlGjnSwKGlGjQSwiGlGjtSwKGlGjvSwCGlGjxSwKGlGjvSwGGlGj0SwKGlGjvSwKG
+lHVK/v///4aUaAdLAXVoN32UKGjYSwJo20sCaN5LAmjhSwJo1UsCaO1LAmjxSwJo9EsCaORLAmjn
+SwJ1aEB9lCho0ksBaM5LAnV1YmV1Lg==
+</properties>
+		<properties node_id="10" format="pickle">gASVRwEAAAAAAAB9lCiMFF9kb21haW5fY2hhbmdlX2hpbnRzlH2UKIwEUmVhbJSMBXIgKDIplEsD
+jAFmlIaUKYeUhpRdlIwGUmVuYW1llIwBcpSFlIaUYWgDjAVnICgyKZRLA2gFhpQph5SGlF2UaAqM
+AWeUhZSGlGFoA4wFYiAoMimUSwNoBYaUKYeUhpRdlGgKjAFilIWUhpRhdYwWX21lcmdlX2RpYWxv
+Z19zZXR0aW5nc5R9lIwSY29udHJvbEFyZWFWaXNpYmxllIiMEW91dHB1dF90YWJsZV9uYW1llIwA
+lIwTc2F2ZWRXaWRnZXRHZW9tZXRyeZRDQgHZ0MsAAwAAAAAAAAAAAAAAAAO/AAACAwAAAAEAAAAf
+AAADvgAAAgIAAAAAAAAAAAeAAAAAAQAAAB8AAAO+AAACApSMC19fdmVyc2lvbl9flEsEdS4=
+</properties>
+		<properties node_id="11" format="literal">{'controlAreaVisible': True, 'currentScriptIndex': 1, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x03\xc0\x00\x00\x00\x00\x00\x00\x07\x7f\x00\x00\x02\x03\x00\x00\x03\xc1\x00\x00\x00\x1f\x00\x00\x07~\x00\x00\x02\x02\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80\x00\x00\x03\xc1\x00\x00\x00\x1f\x00\x00\x07~\x00\x00\x02\x02', 'scriptLibrary': [{'name': 'create_image_from_rgb_values.py', 'script': 'import numpy as np\nfrom Orange.data import Table, Domain, ContinuousVariable, DiscreteVariable\nfrom PIL import Image, ImageOps\nfrom pathlib import Path\n\nif len(in_datas) == 2:\n    if len(in_datas[0]) &gt;= 1 and len(in_datas[1]) &gt;= 1:\n        if len(in_datas[0]) == 1:\n            image_data, compressed_image_data = in_datas[0][0].metas, np.array(in_datas[1])\n        else:\n            image_data, compressed_image_data = in_datas[1][0].metas, np.array(in_datas[0])\n\n        image_name   = str(image_data[1]).split(".")[0]\n        image_type   = str(image_data[1]).split(".")[1]\n        image_width  = image_data[3]\n        image_height = image_data[4] \n\n        r = compressed_image_data[:, 0].reshape((image_height, image_width))\n        g = compressed_image_data[:, 1].reshape((image_height, image_width))\n        b = compressed_image_data[:, 2].reshape((image_height, image_width))\n\n        rgb_image = np.stack((r, g, b), axis=-1)\n        rgb_image = np.clip(rgb_image, 0, 255).astype(np.uint8)\n\n        image = Image.fromarray(rgb_image, mode=\'RGB\')\n        path = str(Path.home() / "Downloads")\n        image.save(f"{path}\\{image_name}_compressed.{image_type}")', 'filename': 'C:/Users/PMR/Downloads/Original Image/create_image_from_rgb_values.py'}], 'scriptText': 'import numpy as np\nfrom Orange.data import Table, Domain, ContinuousVariable, DiscreteVariable\nfrom PIL import Image, ImageOps\nfrom pathlib import Path\n\nif len(in_datas) == 2:\n    if len(in_datas[0]) &gt;= 1 and len(in_datas[1]) &gt;= 1:\n        if len(in_datas[0]) == 1:\n            image_data, compressed_image_data = in_datas[0][0].metas, np.array(in_datas[1])\n        else:\n            image_data, compressed_image_data = in_datas[1][0].metas, np.array(in_datas[0])\n\n        image_name   = str(image_data[1]).split(".")[0]\n        image_type   = str(image_data[1]).split(".")[1]\n        image_width  = image_data[3]\n        image_height = image_data[4] \n\n        r = compressed_image_data[:, 0].reshape((image_height, image_width))\n        g = compressed_image_data[:, 1].reshape((image_height, image_width))\n        b = compressed_image_data[:, 2].reshape((image_height, image_width))\n\n        rgb_image = np.stack((r, g, b), axis=-1)\n        rgb_image = np.clip(rgb_image, 0, 255).astype(np.uint8)\n\n        image = Image.fromarray(rgb_image, mode=\'RGB\')\n        path = str(Path.home() / "Downloads")\n        image.save(f"{path}\\{image_name}_compressed.{image_type}")', 'splitterState': b'\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\xb9\x00\x00\x00y\x01\xff\xff\xff\xff\x01\x00\x00\x00\x02\x00', 'vimModeEnabled': False, '__version__': 2}</properties>
+	</node_properties>
+	<session_state>
+		<window_groups />
+	</session_state>
+</scheme>
